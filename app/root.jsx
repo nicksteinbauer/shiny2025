@@ -8,17 +8,23 @@ import {
 } from "@remix-run/react";
 import NavBar from './components/NavBar'
 
-import styles from "./tailwind.css";
+import styles from "./styles/app.css";
 
 export const meta = () => ({
   charset: "utf-8",
-  title: "Corgi's Playground",
-  description: "Meet Corgi, the smart cuddly creature that everyone loves!",
+  title: "Shiny Windows Window Cleaning",
+  description:
+    "Shiny Windows has been the leading residential window washing and cleaning company in Erie and Ottawa county Ohio",
   viewport: "width=device-width,initial-scale=1",
+  "apple-mobile-web-app-title": "ShinyWindows",
 });
 
 export const links = () => [
-  {rel: "stylesheet", href: styles}
+  {rel: "stylesheet", href: styles},
+  { rel: "icon", href: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+  { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+  { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
+  { rel: "manifest", href: "/site.webmanifest" },
 ]
 
 export default function App() {
@@ -34,18 +40,9 @@ export default function App() {
           <Outlet />
         </main>
         
-<footer className="fixed bottom-0 w-screen p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
-    <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">Created with <a href="https://remix.run/" className="hover:underline">Remix</a> and <a href="https://contentful.com/" className="hover:underline">Contentful</a>
-    </span>
-    <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-        <li>
-            <a href="https://www.contentful.com/remix-tutorial/" className="mr-4 hover:underline md:mr-6 ">Read More</a>
-        </li>
-        <li>
-            <a href="https://github.com/contentful/starter-remix-portfolio" className="mr-4 hover:underline md:mr-6">GitHub</a>
-        </li>
-    </ul>
-</footer>
+        <footer className="">
+            
+        </footer>
 
         <ScrollRestoration />
         <Scripts />

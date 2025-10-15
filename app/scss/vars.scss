@@ -1,0 +1,254 @@
+// Breakpoints
+$screen-xxxl: 1800px;
+$screen-xxl: 1660px;
+$screen-xl: 1440px;
+$screen-lg: 1200px;
+$screen-md: 992px;
+$screen-sm: 768px;
+$screen-xs: 600px;
+$screen-xxs: 480px;
+$screen-xxxs: 360px;
+
+
+// Colors
+$ltgreen: #a3b18a;
+$darkGray: #333333;
+$green: #05690c;
+$darkGreen: #023205;
+
+$mobile-1: #dcdcdc;
+$mobile-2: #c2c2c2;
+$mobile-3: #acacac;
+
+$shinyBlue: #214A7A;
+
+
+.shinyBlue {
+  fill: $shinyBlue;
+}
+
+
+.noFill {
+  fill: none;
+}
+
+
+.paddingBottom {
+  padding: 0 0 40px;
+}
+
+$icon-font-family: 'Font Awesome 5 Free';
+$solid-icon-weight: 900;
+$outline-icon-weight: 400;
+
+$font-path: '/webfonts';
+
+@font-face {
+    font-family: $icon-font-family;
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: $outline-icon-weight;
+    font-display: auto;
+    src: url('#{$font-path}/fa-regular-400.woff2') format('woff2'), url('#{$font-path}/fa-regular-400.woff') format('woff');
+}
+
+@font-face {
+    font-family: $icon-font-family;
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: $solid-icon-weight;
+    font-display: auto;
+    src: url('#{$font-path}/fa-solid-900.woff2') format('woff2'), url('#{$font-path}/fa-solid-900.woff') format('woff');
+}
+
+@mixin msv-icon($icon-weight: $solid-icon-weight) {
+    font-family: $icon-font-family;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: $icon-weight;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+@mixin add-icon($icon, $selector: before, $icon-weight: $solid-icon-weight) {
+    &:#{$selector} {
+        @include msv-icon($icon-weight);
+        content: $icon;
+    }
+}
+
+$font-family: "Roboto", sans-serif;
+$display: "Baskervville", serif;
+//$font-path: "../assets/fonts"; 
+$roboto: "Roboto", sans-serif;
+$kaushan: "Kaushan Script", cursive;
+
+// @font-face {
+//   font-family: $display;
+//   src: url("#{$font-path}/bebasneue-webfont.woff2") format("woff2"),
+//     url("#{$font-path}/bebasneue-webfont.woff") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html,
+body {
+  font-family: $roboto;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-weight: 300;
+
+}
+
+main p {
+  line-height: 1.6;
+  font-weight: 300;
+}
+dl, ol, ul {
+  font-weight: 300;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  font-weight: 300;
+}
+// body {
+//   font-size: 18px;
+//   line-height: 1.5;
+// }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  //font-family: $display;
+  line-height: 1 !important;
+  font-weight: 400;
+  margin: 0;
+  padding: 20px 0 0;
+}
+
+strong {
+  font-weight: 700 !important;
+}
+
+h1 {
+  
+  font-size: 3em;
+  @media screen and (min-width: $screen-md) {
+    font-size: 6vw;
+  }
+  
+}
+
+h2 {
+  font-size: 2.0em;
+  font-weight: 400;
+  margin: 0 0 10px;
+  padding: 0;
+  line-height: 1.2 !important;
+  // @media screen and (min-width: $screen-md) {
+  //   font-size: 3vw;
+  // }
+  
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.8em;
+  margin: 0 0 10px;
+  padding: 0;
+  line-height: 1.2 !important;
+  // @media screen and (min-width: $screen-md) {
+  //   font-size: 2vw;
+  // }
+}
+
+h4 {
+  font-size: 1.2em;
+  @media screen and (min-width: $screen-md) {
+    font-size: 1.6em;
+  }
+}
+
+h5 {
+  font-size: 1em;
+}
+
+p,
+.p {
+  margin: 1.5em 0;
+  line-height: 1.3;
+}
+
+
+.relative {
+  position: relative;
+}
+
+
+.buttonAbsolute, .buttonRelative {
+  display: inline-block;
+  &::after {
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    transition: width .5s ease-in-out;
+  }
+  a.button {
+    position: relative;
+    z-index: 10;
+  }
+  a.button:link, a.button:active, a.button:visited {
+    color: #fff;
+  }
+}
+
+.buttonAbsolute:hover, .buttonRelative:hover {
+  &::after {
+    width: 100%;
+  }
+}
+a.button {
+  display: inline-block;
+  color: #fff;
+  
+  
+  padding: 5px 10px;
+}
+
+.buttonContainer {
+  display: inline-block;
+}
+
+
+
+main {
+  overflow: hidden;
+}
+
+a {
+  transition: color .4s ease;
+}
+
+a:link, a:active, a:visited {
+  color: $shinyBlue;
+}
+a:hover {
+  color: #333333;
+}
+

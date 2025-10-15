@@ -10,7 +10,8 @@
     "dev:css": "npm run generate:css -- --watch",
     "dev:remix": "remix dev",
     "generate:css": "npx tailwindcss -o ./app/tailwind.css",
-    "start": "remix-serve build"
+    "start": "remix-serve build",
+    "sass": "sass --watch app/scss/app.scss:app/styles/app.css"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.12.1",
@@ -24,7 +25,21 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.4.0",
-    "react-text-loop-next": "^0.0.3"
+    "react-text-loop-next": "^0.0.3",
+    "bootstrap": "^5.3.7",
+    "emailjs": "^4.0.1",
+    "emailjs-com": "^3.2.0",
+    "gsap": "^3.12.7",
+    "lightgallery": "^2.9.0-beta.1",
+    "react-bootstrap": "^2.10.9",
+    "react-recaptcha": "^2.3.10",
+    "react-slick": "^0.31.0",
+    "reactstrap": "^9.1.6",
+    "sass": "^1.85.1",
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.7.2",
+    "validator": "^13.9.0",
+    "sharp": "^0.32.6"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.6.3",
@@ -34,6 +49,6 @@
     "tailwindcss": "^3.1.4"
   },
   "engines": {
-    "node": ">=14"
+    "node": "18.x"
   }
 }

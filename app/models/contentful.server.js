@@ -138,27 +138,10 @@ async function getPage(title) {
         pageCollection(where:{title:$title}){
           items{
             title
-            description{
+            content{
               json
             }
-            rolesCollection{
-              items{
-                roleTitle
-              }
-            }
-            linksCollection{
-              items {
-                name
-                url
-              }
-            }
-            seoMetadata{
-              title
-              ogImage {
-                url
-              }
-              description
-            }
+            
           }
         }
       }
