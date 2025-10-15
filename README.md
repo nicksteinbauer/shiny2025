@@ -384,3 +384,4 @@ netlify deploy --build --prod
 ```
 
 After the successful build, you will be able to view your site!
+# shiny2025
