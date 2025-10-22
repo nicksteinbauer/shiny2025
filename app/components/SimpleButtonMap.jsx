@@ -2,46 +2,62 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { Link } from "@remix-run/react";
-
+import { Link as ScrollLink } from "react-scroll";
 
 function SimpleButtonMap({ buttonsCollection }) {
   const scopeRef = useRef(null);
+  const items = buttonsCollection?.items ?? [];
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
-    // Scope all selectors to this component instance
     const ctx = gsap.context(() => {
-      // Find every .fadeOut in this component and create a trigger
       gsap.utils.toArray(".fadeOut").forEach((el) => {
         ScrollTrigger.create({
           trigger: el,
-          start: "top bottom-=50", // fire when top is 50px above viewport bottom
+          start: "top bottom-=50",
           toggleClass: { targets: el, className: "enable" },
           once: true,
         });
       });
     }, scopeRef);
 
-    // Refresh after images load to avoid misfires due to layout shifts
     const onLoad = () => ScrollTrigger.refresh();
-    window.addEventListener("load", onLoad);
-
+    if (typeof window !== "undefined") window.addEventListener("load", onLoad);
     return () => {
-      window.removeEventListener("load", onLoad);
-      ctx.revert(); // kill all triggers in this scope
+      if (typeof window !== "undefined") window.removeEventListener("load", onLoad);
+      ctx.revert();
     };
-  }, [buttonsCollection?.items?.length]);
+  }, [items.length]);
+
+  if (items.length === 0) return null;
 
   return (
     <div className="buttonContainer always-flex gap10" ref={scopeRef}>
-      {buttonsCollection.items.map((block, i) => {
+      {items.map((block, i) => {
         const { title, buttonClass, buttonText, buttonLink } = block || {};
         const cardClass = `button fadeOut${buttonClass ? ` ${buttonClass}` : ""}`;
 
+        // If buttonClass is "scrollLink", use react-scroll
+        if (buttonClass === "scrollLink") {
+          // react-scroll expects the target element's id or "name" (without the leading #)
+          const toId = (buttonLink || "").replace(/^#/, "");
+          return (
+            <ScrollLink
+              key={title || i}
+              className={cardClass}
+              to={toId}
+              
+              
+            >
+              <span>{buttonText ?? "Scroll"}</span>
+            </ScrollLink>
+          );
+        }
+
+        // Otherwise, use normal Remix <Link> for navigation
         return (
-          <Link key={title || i} className={cardClass} to={buttonLink}>
-            <span>{buttonText}</span>
+          <Link key={title || i} className={cardClass} to={buttonLink || "#"}>
+            <span>{buttonText ?? "Link"}</span>
           </Link>
         );
       })}

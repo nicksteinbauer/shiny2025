@@ -1479,10 +1479,9 @@ function SimpleImageMap({ bannersCollection }) {
 var SimpleImageMap_default = SimpleImageMap;
 
 // app/components/SimpleButtonMap.jsx
-var import_react8 = require("react"), import_gsap2 = require("gsap"), import_ScrollTrigger2 = __toESM(require("gsap/dist/ScrollTrigger")), import_react9 = require("@remix-run/react"), import_jsx_dev_runtime8 = require("react/jsx-dev-runtime");
+var import_react8 = require("react"), import_gsap2 = require("gsap"), import_ScrollTrigger2 = __toESM(require("gsap/dist/ScrollTrigger")), import_react9 = require("@remix-run/react"), import_react_scroll2 = require("react-scroll"), import_jsx_dev_runtime8 = require("react/jsx-dev-runtime");
 function SimpleButtonMap({ buttonsCollection }) {
-  var _a;
-  let scopeRef = (0, import_react8.useRef)(null);
+  let scopeRef = (0, import_react8.useRef)(null), items = (buttonsCollection == null ? void 0 : buttonsCollection.items) ?? [];
   return (0, import_react8.useEffect)(() => {
     import_gsap2.gsap.registerPlugin(import_ScrollTrigger2.default);
     let ctx = import_gsap2.gsap.context(() => {
@@ -1490,29 +1489,51 @@ function SimpleButtonMap({ buttonsCollection }) {
         import_ScrollTrigger2.default.create({
           trigger: el,
           start: "top bottom-=50",
-          // fire when top is 50px above viewport bottom
           toggleClass: { targets: el, className: "enable" },
           once: !0
         });
       });
     }, scopeRef), onLoad = () => import_ScrollTrigger2.default.refresh();
-    return window.addEventListener("load", onLoad), () => {
-      window.removeEventListener("load", onLoad), ctx.revert();
+    return typeof window < "u" && window.addEventListener("load", onLoad), () => {
+      typeof window < "u" && window.removeEventListener("load", onLoad), ctx.revert();
     };
-  }, [(_a = buttonsCollection == null ? void 0 : buttonsCollection.items) == null ? void 0 : _a.length]), /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "buttonContainer always-flex gap10", ref: scopeRef, children: buttonsCollection.items.map((block, i) => {
+  }, [items.length]), items.length === 0 ? null : /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "buttonContainer always-flex gap10", ref: scopeRef, children: items.map((block, i) => {
     let { title, buttonClass, buttonText, buttonLink } = block || {}, cardClass = `button fadeOut${buttonClass ? ` ${buttonClass}` : ""}`;
-    return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_react9.Link, { className: cardClass, to: buttonLink, children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("span", { children: buttonText }, void 0, !1, {
+    if (buttonClass === "scrollLink") {
+      let toId = (buttonLink || "").replace(/^#/, "");
+      return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
+        import_react_scroll2.Link,
+        {
+          className: cardClass,
+          to: toId,
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("span", { children: buttonText ?? "Scroll" }, void 0, !1, {
+            fileName: "app/components/SimpleButtonMap.jsx",
+            lineNumber: 52,
+            columnNumber: 15
+          }, this)
+        },
+        title || i,
+        !1,
+        {
+          fileName: "app/components/SimpleButtonMap.jsx",
+          lineNumber: 45,
+          columnNumber: 13
+        },
+        this
+      );
+    }
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_react9.Link, { className: cardClass, to: buttonLink || "#", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("span", { children: buttonText ?? "Link" }, void 0, !1, {
       fileName: "app/components/SimpleButtonMap.jsx",
-      lineNumber: 44,
+      lineNumber: 60,
       columnNumber: 13
     }, this) }, title || i, !1, {
       fileName: "app/components/SimpleButtonMap.jsx",
-      lineNumber: 43,
+      lineNumber: 59,
       columnNumber: 11
     }, this);
   }) }, void 0, !1, {
     fileName: "app/components/SimpleButtonMap.jsx",
-    lineNumber: 37,
+    lineNumber: 35,
     columnNumber: 5
   }, this);
 }
@@ -1792,7 +1813,7 @@ function Index3() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-3DOQ6OHV.js", imports: ["/build/_shared/chunk-7K3XN3YF.js", "/build/_shared/chunk-XEQ4JCD2.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-YJLACA2W.js", imports: ["/build/_shared/chunk-IUOSU2OV.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-T26E6Y7H.js", imports: ["/build/_shared/chunk-3VMOY2W2.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/faqs": { id: "routes/faqs", parentId: "root", path: "faqs", index: void 0, caseSensitive: void 0, module: "/build/routes/faqs-QO3FB3TH.js", imports: ["/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-J5VLQWQM.js", imports: ["/build/_shared/chunk-3VMOY2W2.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "a48c098f", hmr: void 0, url: "/build/manifest-A48C098F.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-3DOQ6OHV.js", imports: ["/build/_shared/chunk-7K3XN3YF.js", "/build/_shared/chunk-XEQ4JCD2.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-3WSI63XR.js", imports: ["/build/_shared/chunk-A3FJUIWQ.js", "/build/_shared/chunk-IUOSU2OV.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-K7WGQ7ME.js", imports: ["/build/_shared/chunk-X7Y527LN.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/faqs": { id: "routes/faqs", parentId: "root", path: "faqs", index: void 0, caseSensitive: void 0, module: "/build/routes/faqs-QO3FB3TH.js", imports: ["/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-44EATK4Z.js", imports: ["/build/_shared/chunk-X7Y527LN.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "8189275b", hmr: void 0, url: "/build/manifest-8189275B.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !1, v2_headers: !1, v2_meta: !1, v2_normalizeFormMethod: !1, v2_routeConvention: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
