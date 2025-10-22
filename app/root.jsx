@@ -70,8 +70,8 @@ export default function App() {
         <main className="mainContent">
           <Outlet />
         </main>
-        <footer className="mainFooter">
-            <div className="inside-xl">
+        <footer id="contact" className="mainFooter">
+            <div className="inside-lg">
               <section>
                 <h2>Contact Shiny Windows</h2>
                 <p>Have Questions? Want an Estimate? Use the form below to contact <a href="mailto:tim@shiny-windows.com">tim@shiny-windows.com</a> or call at <a href="tel:419-202-2380">(419) 202-2380</a></p>
@@ -84,7 +84,7 @@ export default function App() {
             </div>
         </footer>
         <footer className="subFooter">
-          <div className="inside-xl">
+          <div className="inside-lg">
             <section className="flex-sm gap20">
               <img
                 src={`https://images.ctfassets.net/avt9hyd25nka/5tFMhOAGGu44JLE4mgFeI4/2064d4831abf0e78d78a806bcce3f922/Shiny-Windows-Notebook-Graphic-expanded.png?w=1500`}
@@ -113,6 +113,7 @@ export default function App() {
             </section>
           </div>
         </footer>
+         <script async defer src="https://www.google.com/recaptcha/api.js"></script>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

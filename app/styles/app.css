@@ -13006,6 +13006,10 @@ nav a.linkBlue:hover {
   transition: width 0.8s ease;
 }
 
+.scrollLink {
+  cursor: pointer;
+}
+
 footer h2, footer h3, footer h4, footer p {
   color: #fff;
 }

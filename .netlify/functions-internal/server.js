@@ -178,22 +178,22 @@ function Logo() {
 var Logo_default = Logo;
 
 // app/components/NavBar.jsx
-var import_jsx_dev_runtime3 = require("react/jsx-dev-runtime");
+var import_react_scroll = require("react-scroll"), import_jsx_dev_runtime3 = require("react/jsx-dev-runtime");
 function NavBar() {
   let [mobileMenu, setMobileMenu] = (0, import_react3.useState)(!1), toggle = () => setMobileMenu((m) => !m);
   return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("header", { className: "siteHeader", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "always-flex justify siteHeaderUnder", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "logoContainer", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react2.NavLink, { to: "/", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(Logo_default, {}, void 0, !1, {
         fileName: "app/components/NavBar.jsx",
-        lineNumber: 21,
+        lineNumber: 22,
         columnNumber: 6
       }, this) }, void 0, !1, {
         fileName: "app/components/NavBar.jsx",
-        lineNumber: 20,
+        lineNumber: 21,
         columnNumber: 5
       }, this) }, void 0, !1, {
         fileName: "app/components/NavBar.jsx",
-        lineNumber: 19,
+        lineNumber: 20,
         columnNumber: 4
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "hamContainer", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: mobileMenu ? "hamburger active" : "hamburger", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
@@ -211,22 +211,22 @@ function NavBar() {
           children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: mobileMenu ? "ham-button active" : "ham-button", children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { className: "line line-1" }, void 0, !1, {
               fileName: "app/components/NavBar.jsx",
-              lineNumber: 37,
+              lineNumber: 38,
               columnNumber: 7
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { className: "line line-2" }, void 0, !1, {
               fileName: "app/components/NavBar.jsx",
-              lineNumber: 38,
+              lineNumber: 39,
               columnNumber: 7
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { className: "line line-3" }, void 0, !1, {
               fileName: "app/components/NavBar.jsx",
-              lineNumber: 39,
+              lineNumber: 40,
               columnNumber: 7
             }, this)
           ] }, void 0, !0, {
             fileName: "app/components/NavBar.jsx",
-            lineNumber: 36,
+            lineNumber: 37,
             columnNumber: 6
           }, this)
         },
@@ -234,37 +234,37 @@ function NavBar() {
         !1,
         {
           fileName: "app/components/NavBar.jsx",
-          lineNumber: 27,
+          lineNumber: 28,
           columnNumber: 6
         },
         this
       ) }, void 0, !1, {
         fileName: "app/components/NavBar.jsx",
-        lineNumber: 26,
+        lineNumber: 27,
         columnNumber: 5
       }, this) }, void 0, !1, {
         fileName: "app/components/NavBar.jsx",
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 4
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(DesktopNav, { onClose: () => setMobileMenu(!1) }, void 0, !1, {
         fileName: "app/components/NavBar.jsx",
-        lineNumber: 44,
+        lineNumber: 45,
         columnNumber: 4
       }, this)
     ] }, void 0, !0, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 18,
+      lineNumber: 19,
       columnNumber: 3
     }, this),
     mobileMenu && /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(MobileNav, { onClose: () => setMobileMenu(!1) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 47,
+      lineNumber: 48,
       columnNumber: 23
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/NavBar.jsx",
-    lineNumber: 17,
+    lineNumber: 18,
     columnNumber: 5
   }, this);
 }
@@ -272,41 +272,41 @@ function MobileNav({ onClose }) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("nav", { id: "mobile-nav", className: "panel", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "inside-xxl panelUnder", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("ul", { className: "mobileNav", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react2.NavLink, { to: "/", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { children: "Home" }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 61,
+      lineNumber: 62,
       columnNumber: 15
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 60,
+      lineNumber: 61,
       columnNumber: 13
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 59,
+      lineNumber: 60,
       columnNumber: 11
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react2.NavLink, { to: "/about", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { children: "About Us" }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 66,
+      lineNumber: 67,
       columnNumber: 15
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 65,
+      lineNumber: 66,
       columnNumber: 13
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 64,
+      lineNumber: 65,
       columnNumber: 11
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react2.NavLink, { to: "/faqs", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { children: "FAQs" }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 71,
+      lineNumber: 72,
       columnNumber: 15
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 70,
+      lineNumber: 71,
       columnNumber: 13
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 69,
+      lineNumber: 70,
       columnNumber: 11
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
@@ -316,7 +316,7 @@ function MobileNav({ onClose }) {
         onClick: onClose,
         children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { children: "Pay Bill" }, void 0, !1, {
           fileName: "app/components/NavBar.jsx",
-          lineNumber: 79,
+          lineNumber: 80,
           columnNumber: 15
         }, this)
       },
@@ -324,39 +324,39 @@ function MobileNav({ onClose }) {
       !1,
       {
         fileName: "app/components/NavBar.jsx",
-        lineNumber: 75,
+        lineNumber: 76,
         columnNumber: 13
       },
       this
     ) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 74,
+      lineNumber: 75,
       columnNumber: 11
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react2.NavLink, { className: "linkBlue", to: "/contact", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { children: "Contact / Estimates" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react_scroll.Link, { className: "linkBlue", to: "#contact", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { children: "Contact / Estimates" }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 84,
+      lineNumber: 85,
       columnNumber: 15
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 83,
+      lineNumber: 84,
       columnNumber: 13
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 82,
+      lineNumber: 83,
       columnNumber: 5
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/NavBar.jsx",
-    lineNumber: 58,
+    lineNumber: 59,
     columnNumber: 9
   }, this) }, void 0, !1, {
     fileName: "app/components/NavBar.jsx",
-    lineNumber: 57,
+    lineNumber: 58,
     columnNumber: 7
   }, this) }, void 0, !1, {
     fileName: "app/components/NavBar.jsx",
-    lineNumber: 56,
+    lineNumber: 57,
     columnNumber: 5
   }, this);
 }
@@ -364,41 +364,41 @@ function DesktopNav({ onClose }) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("nav", { id: "", className: "desktopNav", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "flex-md justify-center desktopNavSub", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("ul", { className: "mobileNav always-flex", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react2.NavLink, { className: "flex-vertical", to: "/", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { children: "Home" }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 100,
+      lineNumber: 101,
       columnNumber: 15
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 99,
+      lineNumber: 100,
       columnNumber: 13
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 98,
+      lineNumber: 99,
       columnNumber: 11
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react2.NavLink, { className: "flex-vertical", to: "/about", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { children: "About Us" }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 105,
+      lineNumber: 106,
       columnNumber: 15
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 104,
+      lineNumber: 105,
       columnNumber: 13
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 103,
+      lineNumber: 104,
       columnNumber: 11
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react2.NavLink, { className: "flex-vertical", to: "/faqs", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { children: "FAQs" }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 110,
+      lineNumber: 111,
       columnNumber: 15
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 109,
+      lineNumber: 110,
       columnNumber: 13
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 108,
+      lineNumber: 109,
       columnNumber: 11
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
@@ -409,7 +409,7 @@ function DesktopNav({ onClose }) {
         onClick: onClose,
         children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { children: "Pay Bill" }, void 0, !1, {
           fileName: "app/components/NavBar.jsx",
-          lineNumber: 119,
+          lineNumber: 120,
           columnNumber: 15
         }, this)
       },
@@ -417,45 +417,45 @@ function DesktopNav({ onClose }) {
       !1,
       {
         fileName: "app/components/NavBar.jsx",
-        lineNumber: 114,
+        lineNumber: 115,
         columnNumber: 13
       },
       this
     ) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 113,
+      lineNumber: 114,
       columnNumber: 11
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react2.NavLink, { className: "linkBlue flex-vertical", to: "/contact", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { children: "Contact / Estimates" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react_scroll.Link, { className: "linkBlue flex-vertical scrollLink", to: "contact", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { children: "Contact / Estimates" }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 124,
+      lineNumber: 125,
       columnNumber: 15
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 123,
+      lineNumber: 124,
       columnNumber: 13
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
-      lineNumber: 122,
+      lineNumber: 123,
       columnNumber: 6
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/NavBar.jsx",
-    lineNumber: 97,
+    lineNumber: 98,
     columnNumber: 9
   }, this) }, void 0, !1, {
     fileName: "app/components/NavBar.jsx",
-    lineNumber: 96,
+    lineNumber: 97,
     columnNumber: 7
   }, this) }, void 0, !1, {
     fileName: "app/components/NavBar.jsx",
-    lineNumber: 95,
+    lineNumber: 96,
     columnNumber: 5
   }, this);
 }
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-6U2FGGSS.css";
+var app_default = "/build/_assets/app-34H32GO4.css";
 
 // app/components/ContactForm.jsx
 var import_react4 = require("react"), emailjs = __toESM(require("emailjs-com")), import_reactstrap = require("reactstrap"), import_validator = require("validator"), import_react_recaptcha = __toESM(require("react-recaptcha")), import_sweetalert2 = __toESM(require("sweetalert2")), import_jsx_dev_runtime4 = require("react/jsx-dev-runtime"), US_STATES = [
@@ -895,7 +895,7 @@ function App() {
         lineNumber: 70,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("footer", { className: "mainFooter", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "inside-xl", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("footer", { id: "contact", className: "mainFooter", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "inside-lg", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("section", { children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h2", { children: "Contact Shiny Windows" }, void 0, !1, {
             fileName: "app/root.jsx",
@@ -943,7 +943,7 @@ function App() {
         lineNumber: 73,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("footer", { className: "subFooter", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "inside-xl", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("section", { className: "flex-sm gap20", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("footer", { className: "subFooter", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "inside-lg", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("section", { className: "flex-sm gap20", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(
           "img",
           {
@@ -1023,19 +1023,24 @@ function App() {
         lineNumber: 86,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react6.ScrollRestoration, {}, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("script", { async: !0, defer: !0, src: "https://www.google.com/recaptcha/api.js" }, void 0, !1, {
         fileName: "app/root.jsx",
         lineNumber: 116,
-        columnNumber: 9
+        columnNumber: 10
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react6.Scripts, {}, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react6.ScrollRestoration, {}, void 0, !1, {
         fileName: "app/root.jsx",
         lineNumber: 117,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react6.LiveReload, {}, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react6.Scripts, {}, void 0, !1, {
         fileName: "app/root.jsx",
         lineNumber: 118,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react6.LiveReload, {}, void 0, !1, {
+        fileName: "app/root.jsx",
+        lineNumber: 119,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
@@ -1787,7 +1792,7 @@ function Index3() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-KSVQP67G.js", imports: ["/build/_shared/chunk-XEQ4JCD2.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-SNJQIV4C.js", imports: ["/build/_shared/chunk-IUOSU2OV.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-T26E6Y7H.js", imports: ["/build/_shared/chunk-3VMOY2W2.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/faqs": { id: "routes/faqs", parentId: "root", path: "faqs", index: void 0, caseSensitive: void 0, module: "/build/routes/faqs-QO3FB3TH.js", imports: ["/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-J5VLQWQM.js", imports: ["/build/_shared/chunk-3VMOY2W2.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "f8c1e002", hmr: void 0, url: "/build/manifest-F8C1E002.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-3DOQ6OHV.js", imports: ["/build/_shared/chunk-7K3XN3YF.js", "/build/_shared/chunk-XEQ4JCD2.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-YJLACA2W.js", imports: ["/build/_shared/chunk-IUOSU2OV.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-T26E6Y7H.js", imports: ["/build/_shared/chunk-3VMOY2W2.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/faqs": { id: "routes/faqs", parentId: "root", path: "faqs", index: void 0, caseSensitive: void 0, module: "/build/routes/faqs-QO3FB3TH.js", imports: ["/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-J5VLQWQM.js", imports: ["/build/_shared/chunk-3VMOY2W2.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "a48c098f", hmr: void 0, url: "/build/manifest-A48C098F.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !1, v2_headers: !1, v2_meta: !1, v2_normalizeFormMethod: !1, v2_routeConvention: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

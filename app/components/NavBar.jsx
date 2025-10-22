@@ -1,6 +1,7 @@
 import { NavLink } from "@remix-run/react";
 import { useState } from "react";
 import Logo from "./Logo";
+import { Link } from "react-scroll";
 
 export default function NavBar() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -80,9 +81,9 @@ function MobileNav({ onClose }) {
             </a>
           </li>
 		  <li>
-            <NavLink className="linkBlue" to="/contact" onClick={onClose}>
+            <Link className="linkBlue" to="#contact" onClick={onClose}>
               <span>Contact / Estimates</span>
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </div>
@@ -120,9 +121,9 @@ function DesktopNav({ onClose }) {
             </a>
           </li>
 		   <li>
-            <NavLink className="linkBlue flex-vertical" to="/contact" onClick={onClose}>
+            <Link className="linkBlue flex-vertical scrollLink" to="contact" onClick={onClose}>
               <span>Contact / Estimates</span>
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </div>
