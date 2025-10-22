@@ -5,7 +5,7 @@ import { client } from "../models/contentful.server";
 //import { MetaFunction } from "@remix-run/node";
 import RichTextRenderer from "../components/RichTextRenderer";
 import SimpleImageMap from "../components/SimpleImageMap";
-import FaqsMap from "../components/faqsMap";
+import FaqsMap from "../components/FaqsMap";
 
 export async function loader(){
 	return json(await client.getPageByTitle("Asked Questions"))

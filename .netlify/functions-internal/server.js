@@ -1665,7 +1665,7 @@ __export(faqs_exports, {
 });
 var import_node4 = require("@remix-run/node"), import_react13 = require("@remix-run/react");
 
-// app/components/faqsMap.jsx
+// app/components/FaqsMap.jsx
 var import_react12 = require("react"), import_gsap3 = require("gsap"), import_ScrollTrigger3 = __toESM(require("gsap/dist/ScrollTrigger"));
 var import_jsx_dev_runtime11 = require("react/jsx-dev-runtime");
 function FaqsMap({ simpleReferenceCollection }) {
@@ -1691,31 +1691,31 @@ function FaqsMap({ simpleReferenceCollection }) {
     let { title, visualTitle, content } = block || {};
     return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "fadeOut faq", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("h3", { children: visualTitle }, void 0, !1, {
-        fileName: "app/components/faqsMap.jsx",
+        fileName: "app/components/FaqsMap.jsx",
         lineNumber: 44,
         columnNumber: 13
       }, this),
       (content == null ? void 0 : content.json) && /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(RichTextRenderer, { content: content == null ? void 0 : content.json }, void 0, !1, {
-        fileName: "app/components/faqsMap.jsx",
+        fileName: "app/components/FaqsMap.jsx",
         lineNumber: 46,
         columnNumber: 20
       }, this) }, void 0, !1, {
-        fileName: "app/components/faqsMap.jsx",
+        fileName: "app/components/FaqsMap.jsx",
         lineNumber: 46,
         columnNumber: 15
       }, this)
     ] }, title || i, !0, {
-      fileName: "app/components/faqsMap.jsx",
+      fileName: "app/components/FaqsMap.jsx",
       lineNumber: 43,
       columnNumber: 11
     }, this);
   }) }, void 0, !1, {
-    fileName: "app/components/faqsMap.jsx",
+    fileName: "app/components/FaqsMap.jsx",
     lineNumber: 37,
     columnNumber: 5
   }, this);
 }
-var faqsMap_default = FaqsMap;
+var FaqsMap_default = FaqsMap;
 
 // app/routes/faqs.jsx
 var import_jsx_dev_runtime12 = require("react/jsx-dev-runtime");
@@ -1761,7 +1761,7 @@ function Index3() {
         lineNumber: 33,
         columnNumber: 6
       }, this),
-      ((_b = simpleReferenceCollection == null ? void 0 : simpleReferenceCollection.items) == null ? void 0 : _b.length) > 0 && /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(faqsMap_default, { simpleReferenceCollection }, void 0, !1, {
+      ((_b = simpleReferenceCollection == null ? void 0 : simpleReferenceCollection.items) == null ? void 0 : _b.length) > 0 && /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(FaqsMap_default, { simpleReferenceCollection }, void 0, !1, {
         fileName: "app/routes/faqs.jsx",
         lineNumber: 37,
         columnNumber: 7
@@ -1787,7 +1787,7 @@ function Index3() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-KSVQP67G.js", imports: ["/build/_shared/chunk-XEQ4JCD2.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-SNJQIV4C.js", imports: ["/build/_shared/chunk-IUOSU2OV.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-T26E6Y7H.js", imports: ["/build/_shared/chunk-3VMOY2W2.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/faqs": { id: "routes/faqs", parentId: "root", path: "faqs", index: void 0, caseSensitive: void 0, module: "/build/routes/faqs-ZW7RREAM.js", imports: ["/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-J5VLQWQM.js", imports: ["/build/_shared/chunk-3VMOY2W2.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "9123d260", hmr: void 0, url: "/build/manifest-9123D260.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-KSVQP67G.js", imports: ["/build/_shared/chunk-XEQ4JCD2.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-SNJQIV4C.js", imports: ["/build/_shared/chunk-IUOSU2OV.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-T26E6Y7H.js", imports: ["/build/_shared/chunk-3VMOY2W2.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/faqs": { id: "routes/faqs", parentId: "root", path: "faqs", index: void 0, caseSensitive: void 0, module: "/build/routes/faqs-QO3FB3TH.js", imports: ["/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-J5VLQWQM.js", imports: ["/build/_shared/chunk-3VMOY2W2.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "f8c1e002", hmr: void 0, url: "/build/manifest-F8C1E002.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !1, v2_headers: !1, v2_meta: !1, v2_normalizeFormMethod: !1, v2_routeConvention: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
