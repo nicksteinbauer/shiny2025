@@ -80,8 +80,8 @@ function MobileNav({ onClose }) {
               <span>Pay Bill</span>
             </a>
           </li>
-		  <li>
-            <Link className="linkBlue" to="#contact" onClick={onClose}>
+		      <li>
+            <Link className="linkBlue scrollLink" to="contact" onClick={onClose}>
               <span>Contact / Estimates</span>
             </Link>
           </li>

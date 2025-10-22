@@ -333,7 +333,7 @@ function MobileNav({ onClose }) {
       lineNumber: 75,
       columnNumber: 11
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react_scroll.Link, { className: "linkBlue", to: "#contact", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { children: "Contact / Estimates" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react_scroll.Link, { className: "linkBlue scrollLink", to: "contact", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { children: "Contact / Estimates" }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
       lineNumber: 85,
       columnNumber: 15
@@ -344,7 +344,7 @@ function MobileNav({ onClose }) {
     }, this) }, void 0, !1, {
       fileName: "app/components/NavBar.jsx",
       lineNumber: 83,
-      columnNumber: 5
+      columnNumber: 9
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/NavBar.jsx",
@@ -1813,7 +1813,7 @@ function Index3() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-3DOQ6OHV.js", imports: ["/build/_shared/chunk-7K3XN3YF.js", "/build/_shared/chunk-XEQ4JCD2.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-3WSI63XR.js", imports: ["/build/_shared/chunk-A3FJUIWQ.js", "/build/_shared/chunk-IUOSU2OV.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-K7WGQ7ME.js", imports: ["/build/_shared/chunk-X7Y527LN.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/faqs": { id: "routes/faqs", parentId: "root", path: "faqs", index: void 0, caseSensitive: void 0, module: "/build/routes/faqs-QO3FB3TH.js", imports: ["/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-44EATK4Z.js", imports: ["/build/_shared/chunk-X7Y527LN.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "8189275b", hmr: void 0, url: "/build/manifest-8189275B.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-3DOQ6OHV.js", imports: ["/build/_shared/chunk-7K3XN3YF.js", "/build/_shared/chunk-XEQ4JCD2.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-4WXECFBN.js", imports: ["/build/_shared/chunk-A3FJUIWQ.js", "/build/_shared/chunk-IUOSU2OV.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-K7WGQ7ME.js", imports: ["/build/_shared/chunk-X7Y527LN.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/faqs": { id: "routes/faqs", parentId: "root", path: "faqs", index: void 0, caseSensitive: void 0, module: "/build/routes/faqs-QO3FB3TH.js", imports: ["/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-44EATK4Z.js", imports: ["/build/_shared/chunk-X7Y527LN.js", "/build/_shared/chunk-OHHI3QHU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "75928071", hmr: void 0, url: "/build/manifest-75928071.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !1, v2_headers: !1, v2_meta: !1, v2_normalizeFormMethod: !1, v2_routeConvention: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
