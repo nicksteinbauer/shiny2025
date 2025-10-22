@@ -1,0 +1,93 @@
+@use 'vars' as *;
+
+
+.full {
+
+}
+
+footer {
+    h2, h3, h4, p {
+        color: #fff;
+    }
+    h4 {
+        line-height: 1.5 !important;
+        padding-top: 0;
+    }
+    a:link {
+        color: #f7f7f7;
+        
+    }
+}
+.mainFooter {
+    background-color: #303030;
+    padding: 40px 0;
+    
+    a:link {
+        color: #f7f7f7;
+        font-style: italic;
+        text-decoration: underline;
+    }
+    section {
+        padding: 0;
+        margin: 40px 0;
+    }
+    
+}
+
+.contact-form {
+    .line {
+        position: relative;
+        .text-muted {
+            position: absolute;
+            left: -999em;
+        }
+    }
+    .full {
+        margin-bottom: 1rem !important;
+    }
+}
+
+.subFooter {
+    .footerLogo {
+        width: 120px;
+    }
+    .st0 {
+    fill: #969696;
+    }
+
+    .st0, .st1, .st2, .st3, .st4, .st5 {
+    fill-rule: evenodd;
+    }
+
+    .st6, .st1 {
+    fill: #fedcbe;
+    }
+
+    .st7 {
+    fill: #231f20;
+    }
+
+    .st8 {
+    fill: #214a7a;
+    }
+
+    .st9, .st3 {
+    fill: #2f2e2e;
+    }
+
+    .st10 {
+    fill: #fff;
+    }
+
+    .st2 {
+    fill: #236bb4;
+    }
+
+    .st4, .st11 {
+    fill: #686867;
+    }
+
+    .st5 {
+    fill: #143960;
+    }
+}

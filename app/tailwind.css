@@ -558,51 +558,18 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
+.block {
+  display: block;
 }
 
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
+.justify-center {
+  justify-content: center;
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
+.text-center {
+  text-align: center;
 }
 
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.pt-8 {
-  padding-top: 2rem;
-}
-
-@media (min-width: 640px) {
-  .sm\:pt-16 {
-    padding-top: 4rem;
-  }
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }

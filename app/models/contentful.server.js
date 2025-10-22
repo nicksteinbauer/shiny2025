@@ -16,6 +16,20 @@ async function apiCall(query, variables) {
     return await fetch(fetchUrl, options)
 }
 
+async function apiJSON(query, variables) {
+  const resp = await apiCall(query, variables); // your existing fetcher
+  if (!resp.ok) {
+    const text = await resp.text();
+    throw new Error(`Contentful HTTP ${resp.status}: ${text}`);
+  }
+  const json = await resp.json();
+  if (json.errors) {
+    // Log but don't crash — let callers decide
+    console.error("Contentful GQL errors:", JSON.stringify(json.errors, null, 2));
+  }
+  return json;
+}
+
 async function getProjects() {
     
     const query = `
@@ -132,16 +146,45 @@ async function getSingleBlog(slug) {
     return await json.data.blogCollection.items[0]
 }
 
-async function getPage(title) {
+async function getPageByTitle(title) {
     const query=`
     query($title:String) {
         pageCollection(where:{title:$title}){
           items{
             title
+            secondaryTitle
+            pageClass
             content{
               json
             }
-            
+            bannersCollection(limit: 2) {
+              items {
+                imageClass
+                image {
+                  url
+                  width
+                  height
+                  description
+                }
+              }
+            }
+            buttonsCollection(limit: 2) {
+              items {
+                title
+                buttonText
+                buttonLink
+                buttonClass
+              }
+            }
+            simpleReferenceCollection(limit: 20) {
+              items {
+                title
+                visualTitle
+                content {
+                  json
+                }
+              }
+            }
           }
         }
       }
@@ -154,4 +197,34 @@ async function getPage(title) {
     return await json.data.pageCollection.items[0]
 }
 
-export const client = {getProjects, getTalks, getAllBlogs, getSingleBlog, getPage}
+// --- query by SLUG (use this if your content type has a slug field) ---
+async function getPageBySlug(slug) {
+  const query = /* GraphQL */ `
+    query ($slug: String!, $limit: Int = 1) {
+      pageCollection(where: { slug: $slug }, limit: $limit) {
+        items {
+          title
+          secondaryTitle
+          pageClass
+          content { json }
+          bannersCollection(limit: 2) {
+            items {
+              imageClass
+              image { url width height description }
+            }
+          }
+          buttonsCollection(limit: 2) {
+            items { title buttonText buttonLink buttonClass }
+          }
+          simpleReferenceCollection(limit: 20) {
+            items { title visualTitle content { json } }
+          }
+        }
+      }
+    }
+  `;
+  const json = await apiJSON(query, { slug });
+  return json?.data?.pageCollection?.items?.[0] ?? null;
+}
+
+export const client = {getProjects, getTalks, getAllBlogs, getSingleBlog, getPageByTitle, getPageBySlug}

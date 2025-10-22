@@ -1,0 +1,115 @@
+@use 'vars' as *;
+
+html {
+    height: 100%;
+}
+
+body.route-about {
+    height: 100%;
+    .mainContent, .about {
+        height: 100%;
+    }
+}
+
+
+body {
+    background-color: $shinyBlue;
+    background-image: url(/shiny-wave.svg);
+    background-size: 79px 5px;
+    background-position: right top;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.mainContent {
+    padding-top: 58.22px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.simpleImg {
+    img {
+        background-color: #fff;
+        padding: 10px;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
+    }
+}
+
+.fadeOut {
+    opacity: 0;
+    transform: translate(20px, 20px);
+    transition: all .4s ease;
+
+}
+.fadeOut.enable {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.inside-xl.no-padd {
+    @media screen and (min-width: $screen-xs) {
+        padding: 0;
+    }
+}
+
+.main-image {
+    position: relative;
+    z-index: 2;
+    @media screen and (min-width: $screen-xs) {
+        left: 20px;
+    }
+}
+.main-image.full-size {
+    @media screen and (min-width: $screen-xs) {
+        left: 0;
+        padding: 40px;
+    }
+}
+.secondary-image {
+    position: relative;
+    z-index: 1;
+    
+    display: none;
+    @media screen and (min-width: $screen-xs) {
+        display: block;
+        left: -20px;
+        
+    }
+}
+
+.backWhite {
+    background-color: #fff;
+    color: $shinyBlue;
+    a.button {
+        background-color: $shinyBlue;
+        background-image: url(/shiny-wave.svg);
+        background-size: 79px 5px;
+        background-position: right top;
+        background-attachment: fixed;
+        color: #fff;
+        padding: 10px 15px;
+        box-shadow: none;
+        font-style: italic;
+        font-weight: 700;
+        font-family: $displayFont;
+    }
+    a.button:hover {
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.6);
+    }
+}
+
+h1 {
+    span {
+        font-style: italic;
+        display: inline-block;
+        padding-right: 10px;
+    }
+}
+
+.aboutPadd {
+    padding: 20px;
+}
+
+.faq {
+    padding-top: 20px;
+}

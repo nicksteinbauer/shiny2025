@@ -8,7 +8,7 @@ import SimpleImageMap from "../components/SimpleImageMap";
 import SimpleButtonMap from "../components/SimpleButtonMap";
 
 export async function loader(){
-	return json(await client.getPageByTitle("Window Washing Specialists"))
+	return json(await client.getPageByTitle("Shiny Windows Window Cleaning"))
 }
 
 
@@ -17,30 +17,30 @@ export default function Index() {
 	const {title, secondaryTitle, content, pageClass, bannersCollection, buttonsCollection } = useLoaderData();
 	
   return (
-	<div className={pageClass}>
-		
-		{bannersCollection?.items?.length > 0 && (
-			<section>
-				<div className="inside-xl no-padd">
-					<SimpleImageMap bannersCollection={bannersCollection}/>
-				</div>
-			</section>
-		)}
-		<section className="backWhite">
+	<div className={`flex-sm inside-xl noPadding ${pageClass}`}>
+
+		<section className="backWhite sixty flex-vertical">
 			<div className="inside-lg">
 				<h1><span>{secondaryTitle}</span>{title}</h1>
 				{content?.json && (
 					<div><RichTextRenderer content={content.json} /></div>
 				)}
 				{buttonsCollection?.items?.length > 0 && (
-					
 					<div className="">
 						<SimpleButtonMap buttonsCollection={buttonsCollection}/>
 					</div>
-					
 				)}
 			</div>
 		</section>
+		
+		{bannersCollection?.items?.length > 0 && (
+			<div className="forty flex-vertical">
+				<div className="aboutPadd">
+					<SimpleImageMap bannersCollection={bannersCollection}/>
+				</div>
+			</div>
+		)}
+		
 	</div>
   );
 }

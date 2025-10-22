@@ -81,10 +81,7 @@ img {
     padding-right: 20px;
     box-sizing: border-box;
     margin: 0 auto;
-    @media screen and (min-width: $screen-md) {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
+    
 }
 
 .inside-modified {
@@ -409,3 +406,10 @@ ul {
     }
 }
 
+section {
+    padding: 40px 0;
+}
+
+.full {
+    flex: 1;
+}

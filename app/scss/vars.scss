@@ -80,11 +80,13 @@ $font-path: '/webfonts';
     }
 }
 
-$font-family: "Roboto", sans-serif;
-$display: "Baskervville", serif;
+// $font-family: "Roboto", sans-serif;
+// $display: "Baskervville", serif;
 //$font-path: "../assets/fonts"; 
-$roboto: "Roboto", sans-serif;
-$kaushan: "Kaushan Script", cursive;
+// $roboto: "Roboto", sans-serif;
+// $kaushan: "Kaushan Script", cursive;
+
+
 
 // @font-face {
 //   font-family: $display;
@@ -93,11 +95,14 @@ $kaushan: "Kaushan Script", cursive;
 //   font-weight: normal;
 //   font-style: normal;
 // }
-@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+$mainFont: "Open Sans", sans-serif;
+$displayFont: "Merriweather", serif;
 
 html,
 body {
-  font-family: $roboto;
+  font-family: $mainFont;
   margin: 0;
   padding: 0;
 }
@@ -131,9 +136,9 @@ h2,
 h3,
 h4,
 h5 {
-  //font-family: $display;
+  font-family: $displayFont;
   line-height: 1 !important;
-  font-weight: 400;
+  font-weight: 700;
   margin: 0;
   padding: 20px 0 0;
 }
@@ -144,11 +149,13 @@ strong {
 
 h1 {
   
-  font-size: 3em;
+  font-size: 2.5em;
   @media screen and (min-width: $screen-md) {
-    font-size: 6vw;
+    font-size: 5vw;
   }
-  
+  @media screen and (min-width: $screen-xl) {
+    font-size: 4em;
+  }
 }
 
 h2 {
@@ -176,8 +183,9 @@ h3 {
 
 h4 {
   font-size: 1.2em;
+  font-weight: 400;
   @media screen and (min-width: $screen-md) {
-    font-size: 1.6em;
+    font-size: 1.3em;
   }
 }
 
